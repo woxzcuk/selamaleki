@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div id="loading">
+  <img src="guard.gif" width="100%" height="100%">
+
+</div>
+
+<style>
+  #loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    z-index: 999
+  }
+</style>
+
+<script>
+  window.addEventListener('load', fg_load)
+
+  function fg_load() {
+    document.getElementById('loading').style.display = 'none'
+  }
+</script>
+  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="ekip.css">
+</head>
+
+<body>
+  <div class="banner">
+    <div class="navbar">
+     <span class="text-logo">AGONY</span>
+        <ul>
+
+
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="videolar.html">Videolar</a></li>
+          <li><a href="smedya.html">Sosyal Medya</a></li>
+          <li><a href="ekip.html">Ekip</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a href="premium.html">Premium'a Katıl !</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+      <img src="img/kursat.jpg" alt="Resim" height="200" border="2" />
+      <p>Merhabalar ben Journeux. </p>
+
+      <p> AGONY - Youtubenin Video Editörüyüm.</p>
+
+      <p>Ekip arkadaşlarıma göz atmaya devam etmek
+        istersen altta bulunan GERİ DÖN butonuna basarak ekip arkadaşlarıma göz atmaya devam edebilirsin.</p>
+      <div>
+
+
+        <a href="ekip.html"> <button type="button"><span></span>GERİ DÖN</button>
+
+
+
+      </div>
+    </div>
+  </div>
+</body>
+
+    <!-- jquery cdn link  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- custom js file link  -->
+  <script src="js/script.js"></script>
+
+
+  <script type="text/javascript">
+
+    function IE(e) {
+      if (navigator.appName == "Microsoft Internet Explorer" && (event.button == "2" || event.button == "3")) {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Woops...',
+          text: 'Sitedeki kodların güvenliği için sağ tık engellendi',
+
+
+        })
+        return false;
+      }
+    }
+    function NS(e) {
+      if (document.layers || (document.getElementById && !document.all)) {
+        if (e.which == "2" || e.which == "3") {
+          Swal.fire({
+            icon: 'warning',
+            title: 'Woops...',
+            text: 'Sitedeki kodların güvenliği için sağ tık engellendi',
+
+          })
+          return false;
+        }
+      }
+    }
+    document.onmousedown = IE; document.onmouseup = NS; document.oncontextmenu = new Function("return false");
+//-->
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</html>
